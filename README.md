@@ -15,6 +15,18 @@ It makes error messages from PHP, `admin-ajax.php`, and WP REST API a _great_ de
 | -------------------------------------------------- | -------- |  
 | `composer require rarst/wps` | [![Download wps](https://img.shields.io/badge/dynamic/json.svg?label=download&url=https%3A%2F%2Fapi.github.com%2Frepos%2Frarst%2Fwps%2Freleases%2Flatest&query=%24.assets[0].name&style=for-the-badge)](https://github.com/Rarst/wps/releases/latest/download/wps.zip) |
 
+* change settings in `wp-config.php` file to this:
+```php
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+if(file_exists(__DIR__ . "/vendor/autoload.php")) {
+    require_once( __DIR__ . "/vendor/autoload.php" ) ;    
+}
+```
+
+* `Active` Plugin "wps" in Wordpress Administration "Plugins" list. 
+
+
 ## Usage
 
 The plugin is meant strictly for development and will only work with `WP_DEBUG` and `WP_DEBUG_DISPLAY` configuration constants enabled.
